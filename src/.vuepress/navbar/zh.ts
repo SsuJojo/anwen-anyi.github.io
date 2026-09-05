@@ -4,6 +4,11 @@ import { navbar } from "vuepress-theme-hope";
 export const zhNavbar = navbar([
   "/",
   {
+    text: "作品集",
+    link: "/portfolio/",
+    icon: "fa-solid fa-layer-group",
+  },
+  {
     text: "监控",
     link: "/other/",
     icon: "fa-solid fa-solar-system",
@@ -25,4 +30,3 @@ export const zhNavbar = navbar([
     ],
   },
 ]);
-
