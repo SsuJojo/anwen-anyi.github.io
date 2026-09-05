@@ -4,4 +4,199 @@
       min-height: 600px;
     }
   }
-  
+
+.portfolio-page {
+  .theme-hope-content,
+  .vp-page-content {
+    max-width: none;
+    padding: 0;
+  }
+
+  .vp-page-title,
+  .vp-page-meta,
+  .vp-page-nav,
+  .vp-page-footer {
+    display: none;
+  }
+}
+
+.portfolio-shell {
+  --portfolio-ink: #15161a;
+  --portfolio-paper: #f4f1eb;
+  --portfolio-line: rgba(21, 22, 26, 0.18);
+  color: var(--portfolio-ink);
+  background: var(--portfolio-paper);
+  font-size: 16px;
+}
+
+.portfolio-hero,
+.portfolio-case,
+.portfolio-end {
+  box-sizing: border-box;
+  min-height: min(760px, calc(100vh - 56px));
+  padding: clamp(3rem, 8vw, 8rem);
+}
+
+.portfolio-hero {
+  display: grid;
+  align-content: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at 82% 18%, #faeabc 0, transparent 25%), linear-gradient(135deg, #f4f1eb 0%, #dbe7eb 100%);
+}
+
+.portfolio-kicker,
+.portfolio-index {
+  margin: 0 0 1.25rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.portfolio-hero h1,
+.portfolio-end h2 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.07em;
+}
+
+.portfolio-lede {
+  max-width: 38rem;
+  margin: 2rem 0;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.75;
+}
+
+.portfolio-actions,
+.portfolio-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.portfolio-button,
+.portfolio-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.8rem;
+  box-sizing: border-box;
+  padding: 0.7rem 1rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: inherit;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.portfolio-button--primary {
+  color: #fff;
+  background: #15161a;
+}
+
+.portfolio-scroll {
+  margin: 4rem 0 0;
+  font-size: 0.88rem;
+  opacity: 0.68;
+}
+
+.portfolio-case {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.82fr);
+  gap: clamp(2rem, 6vw, 8rem);
+  align-items: center;
+  border-top: 1px solid var(--portfolio-line);
+}
+
+.portfolio-copy h2 {
+  margin: 0 0 1.3rem;
+  font-size: clamp(2.6rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.portfolio-summary {
+  max-width: 38rem;
+  margin: 0;
+  font-size: clamp(1.08rem, 1.6vw, 1.35rem);
+  line-height: 1.7;
+}
+
+.portfolio-points {
+  max-width: 36rem;
+  margin: 1.6rem 0 2rem;
+  padding-left: 1.2rem;
+  line-height: 1.8;
+}
+
+.portfolio-shot {
+  margin: 0;
+}
+
+.portfolio-shot img {
+  display: block;
+  width: 100%;
+  border-radius: 0.65rem;
+  box-shadow: 0 1.6rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-shot figcaption {
+  margin-top: 0.7rem;
+  font-size: 0.78rem;
+  opacity: 0.65;
+}
+
+.portfolio-art {
+  display: flex;
+  min-height: clamp(17rem, 33vw, 29rem);
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  overflow: hidden;
+  border-radius: 0.65rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(1rem, 2vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.portfolio-art span {
+  padding: 0.45em 0.6em;
+  border: 1px solid currentColor;
+  border-radius: 0.35em;
+}
+
+.portfolio-art--canteen { flex-direction: column; background: #ffcf4a; }
+.portfolio-art--input { color: #fff; background: #1a1b22; }
+.portfolio-art--watch { flex-wrap: wrap; color: #fff; background: #5a45a6; }
+.portfolio-art--mirror { flex-wrap: wrap; background: #f6d8d1; }
+.portfolio-art--search { flex-direction: column; align-items: flex-start; color: #e7ffef; background: #124b36; }
+
+.portfolio-case--blue { background: #dceaf9; }
+.portfolio-case--dark { color: #f5f3ee; --portfolio-line: rgba(255,255,255,0.22); background: #20232c; }
+.portfolio-case--violet { color: #fbf8ff; --portfolio-line: rgba(255,255,255,0.22); background: #5a45a6; }
+.portfolio-case--warm { background: #ffd9c7; }
+.portfolio-case--green { color: #e7ffef; --portfolio-line: rgba(255,255,255,0.22); background: #124b36; }
+
+.portfolio-end {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  color: #f4f1eb;
+  background: #15161a;
+}
+
+.portfolio-end .portfolio-button { margin-top: 2rem; }
+
+@media (max-width: 768px) {
+  .portfolio-hero,
+  .portfolio-case,
+  .portfolio-end { min-height: auto; padding: 4.5rem 1.4rem; }
+  .portfolio-hero { min-height: calc(100vh - 56px); }
+  .portfolio-case { grid-template-columns: 1fr; }
+  .portfolio-case--featured .portfolio-shot { grid-row: 1; }
+  .portfolio-art { min-height: 15rem; }
+}
+
